@@ -1,0 +1,325 @@
+- generic [active] [ref=f3e1]:
+  - link "본문으로 건너뛰기" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - link "구정숙 EDUCATOR & RESEARCHER" [ref=f3e4] [cursor=pointer]:
+      - /url: "#home"
+      - generic [aria-hidden] [ref=f3e5]: g.
+      - generic [ref=f3e6]:
+        - text: 구정숙
+        - generic [ref=f3e7]: EDUCATOR & RESEARCHER
+    - navigation "주요 메뉴" [ref=f3e8]:
+      - link "About" [ref=f3e9] [cursor=pointer]:
+        - /url: "#about"
+      - link "Activities" [ref=f3e10] [cursor=pointer]:
+        - /url: "#activities"
+      - link "Expertise" [ref=f3e11] [cursor=pointer]:
+        - /url: "#expertise"
+      - link "Sharing" [ref=f3e12] [cursor=pointer]:
+        - /url: "#sharing"
+      - link "Recognition" [ref=f3e13] [cursor=pointer]:
+        - /url: "#awards"
+      - link "함께 성장하기" [ref=f3e14] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=f3e17]:
+    - region [ref=f3e18]:
+      - generic [ref=f3e19]:
+        - paragraph [ref=f3e20]: THE EDUCATOR, THE EXPLORER.
+        - paragraph [ref=f3e22]:
+          - text: 수학교사
+          - strong [ref=f3e23]: 구정숙
+        - heading "도전으로 변화를 만들고, 교육의 본질을 향합니다." [level=1] [ref=f3e24]: 도전으로변화를 만들고,교육의 본질을 향합니다.
+        - paragraph [ref=f3e25]: 학생의 가능성을 믿고, 수업의 본질을 고민하며, AI와 디지털 기술을 통해 새로운 배움의 길을 탐색합니다. 학생의 성장과 교사의 전문성을 함께 생각하는 수학교사 구정숙입니다.
+        - generic [ref=f3e26]:
+          - link "About Me 나의 이야기" [ref=f3e27] [cursor=pointer]:
+            - /url: "#about"
+            - text: About Me
+            - generic [ref=f3e30]: 나의 이야기
+          - link "Expertise 전문성과 활동" [ref=f3e31] [cursor=pointer]:
+            - /url: "#expertise"
+            - text: Expertise
+            - generic [aria-hidden] [ref=f3e32]: ↗
+            - generic [ref=f3e33]: 전문성과 활동
+          - link "Contact 연락하기" [ref=f3e34] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Contact ↗
+            - generic [ref=f3e35]: 연락하기
+        - paragraph [ref=f3e36]: Math Educator · AI & Digital Education · Teaching Innovation
+      - generic [ref=f3e37]:
+        - generic [ref=f3e45]: f ( learning ) = growth
+        - generic [ref=f3e47]:
+          - generic [ref=f3e48]: A LIFELONG LEARNER
+          - generic [ref=f3e49]: JS.
+          - generic [ref=f3e50]: 구정숙
+          - generic [ref=f3e51]: MATH EDUCATOR
+        - generic [ref=f3e52]:
+          - generic [ref=f3e53]: 25년
+          - generic [ref=f3e54]:
+            - text: Mathematics
+            - strong [ref=f3e56]: Education
+        - generic [ref=f3e57]: 더 나은 배움을 향한 끊임없는 탐구
+        - generic [ref=f3e59]: CURIOSITY → INQUIRY → POSSIBILITY
+    - generic [ref=f3e60]:
+      - paragraph [ref=f3e61]: “연구하는 마음은 배움에 대한 겸손이요, 학생들을 향한 가장 깊은 사랑이다.”
+      - link "SCROLL TO EXPLORE" [ref=f3e62] [cursor=pointer]:
+        - /url: "#about"
+        - text: SCROLL TO EXPLORE ↓
+    - generic [ref=f3e64]:
+      - generic [ref=f3e65]:
+        - generic [ref=f3e66]:
+          - paragraph [ref=f3e67]: 01 / EDUCATIONAL PHILOSOPHY
+          - heading "Teaching with Purpose, Growing with Passion" [level=2] [ref=f3e68]: Teaching with Purpose,Growing with Passion
+        - paragraph [ref=f3e69]: 배움의 본질을 지키며,새로운 가능성에 도전합니다.
+      - blockquote [ref=f3e70]:
+        - generic [aria-hidden] [ref=f3e71]: “
+        - paragraph [ref=f3e72]:
+          - text: 연구하는 마음은
+          - emphasis [ref=f3e73]: 배움에 대한 겸손
+          - text: 이요,학생들을 향한
+          - emphasis [ref=f3e74]: 가장 깊은 사랑
+          - text: 이다.
+        - generic [ref=f3e75]: 구정숙 · 교육을 향한 마음
+      - generic [ref=f3e76]:
+        - article [ref=f3e77]:
+          - generic [ref=f3e78]: "01"
+          - heading "학생의 성장을 중심에 두는 수업" [level=3] [ref=f3e81]: 학생의 성장을중심에 두는 수업
+          - paragraph [ref=f3e82]: 학생의 작은 변화와 성공 경험을 소중하게 생각합니다.
+          - generic [ref=f3e83]: STUDENT GROWTH
+        - article [ref=f3e84]:
+          - generic [ref=f3e85]: "02"
+          - heading "배움이 일어나는 수업과 평가" [level=3] [ref=f3e88]: 배움이 일어나는수업과 평가
+          - paragraph [ref=f3e89]: 학생 참여형 수업과 과정 중심 평가를 통해 배움의 과정을 지원합니다.
+          - generic [ref=f3e90]: MEANINGFUL LEARNING
+        - article [ref=f3e91]:
+          - generic [ref=f3e92]: "03"
+          - heading "AI와 디지털을 활용한 교육 혁신" [level=3] [ref=f3e95]: AI와 디지털을 활용한교육 혁신
+          - paragraph [ref=f3e96]: 새로운 기술을 활용하되 언제나 학생의 배움을 중심에 둡니다.
+          - generic [ref=f3e97]: PURPOSEFUL INNOVATION
+        - article [ref=f3e98]:
+          - generic [ref=f3e99]: "04"
+          - heading "함께 배우고 성장하는 교사 문화" [level=3] [ref=f3e102]: 함께 배우고 성장하는교사 문화
+          - paragraph [ref=f3e103]: 수업 연구와 실천 경험을 나누며 함께 성장하는 교육 공동체를 지향합니다.
+          - generic [ref=f3e104]: GROWING TOGETHER
+    - generic [ref=f3e105]:
+      - generic [ref=f3e106]:
+        - generic [ref=f3e107]:
+          - paragraph [ref=f3e108]: 02 / PROFESSIONAL ACTIVITIES
+          - heading "Leadership & Professional Activities" [level=2] [ref=f3e109]: Leadership &Professional Activities
+        - paragraph [ref=f3e110]: 교실에서 시작한 실천을,교육의 변화로 연결합니다.
+      - generic [ref=f3e111]:
+        - complementary [ref=f3e112]:
+          - generic [aria-hidden] [ref=f3e113]: ✳
+          - heading "실천하고, 연구하고, 함께 이끌어갑니다." [level=3] [ref=f3e114]: 실천하고, 연구하고,함께 이끌어갑니다.
+          - paragraph [ref=f3e115]: AI·디지털 교육부터 수업과 평가,교사 전문성 개발까지.
+          - generic [ref=f3e116]:
+            - generic [ref=f3e117]: "2025"
+            - generic [ref=f3e119]: "2026"
+          - generic [ref=f3e120]: A CONTINUING JOURNEY
+        - generic [ref=f3e121]:
+          - group "교육 활동 분야" [ref=f3e122]:
+            - button "전체" [pressed] [ref=f3e123] [cursor=pointer]
+            - button "AI·디지털" [ref=f3e124] [cursor=pointer]
+            - button "연구·자문" [ref=f3e125] [cursor=pointer]
+            - button "교육 리더십" [ref=f3e126] [cursor=pointer]
+          - paragraph [ref=f3e127]
+          - generic [ref=f3e128]:
+            - article [ref=f3e129]:
+              - generic [ref=f3e131]:
+                - generic [ref=f3e132]:
+                  - generic [ref=f3e133]: "2025"
+                  - generic [ref=f3e134]: "2026"
+                - heading "AI 에듀테크 선도교사단 (2025, 2026)" [level=3] [ref=f3e135]
+              - generic [aria-hidden] [ref=f3e136]: "01"
+            - article [ref=f3e137]:
+              - generic [ref=f3e139]:
+                - generic [ref=f3e140]:
+                  - generic [ref=f3e141]: "2025"
+                  - generic [ref=f3e142]: "2026"
+                - heading "강서양천 연수기획단(2025, 2026)" [level=3] [ref=f3e143]
+              - generic [aria-hidden] [ref=f3e144]: "02"
+            - article [ref=f3e145]:
+              - heading "인공지능 교육서비스 선도교사" [level=3] [ref=f3e148]
+              - generic [aria-hidden] [ref=f3e149]: "03"
+            - article [ref=f3e150]:
+              - generic [ref=f3e152]:
+                - generic [ref=f3e153]: "2025"
+                - heading "AIDT 선도교원(2025)" [level=3] [ref=f3e155]
+              - generic [aria-hidden] [ref=f3e156]: "04"
+            - article [ref=f3e157]:
+              - generic [ref=f3e159]:
+                - generic [ref=f3e160]: "2026"
+                - heading "새싹연구교사(2026 KERIS)" [level=3] [ref=f3e162]
+              - generic [aria-hidden] [ref=f3e163]: "05"
+            - article [ref=f3e164]:
+              - generic [ref=f3e166]:
+                - generic [ref=f3e167]: "2026"
+                - heading "수업평가나눔 개념기반 탐구학습 분임장(2026)" [level=3] [ref=f3e169]
+              - generic [aria-hidden] [ref=f3e170]: "06"
+            - article [ref=f3e171]:
+              - generic [ref=f3e173]:
+                - generic [ref=f3e174]: "2026"
+                - heading "천재교육 서논술형 평가 지원 플랫폼 개발 자문위원(2026)" [level=3] [ref=f3e176]
+              - generic [aria-hidden] [ref=f3e177]: "07"
+    - generic [ref=f3e179]:
+      - generic [ref=f3e180]:
+        - generic [ref=f3e181]:
+          - paragraph [ref=f3e182]: 03 / PROFESSIONAL EXPERTISE
+          - heading "Professional Expertise & Development" [level=2] [ref=f3e183]: Professional Expertise& Development
+        - paragraph [ref=f3e184]: 끊임없는 배움으로교육 전문성을 확장합니다.
+      - paragraph [ref=f3e185]: 전문성 및 연수
+      - generic [ref=f3e186]:
+        - article [ref=f3e187]:
+          - generic [ref=f3e188]: "01"
+          - heading "교실혁명선도교사" [level=3] [ref=f3e189]
+        - article [ref=f3e192]:
+          - generic [ref=f3e193]: "02"
+          - heading "디지털수업평가 전문가" [level=3] [ref=f3e194]
+        - article [ref=f3e197]:
+          - generic [ref=f3e198]: "03"
+          - heading "2022 교육과정 수업전문가" [level=3] [ref=f3e199]
+        - article [ref=f3e202]:
+          - generic [ref=f3e203]: "04"
+          - heading "AIEDAP 마스터교원" [level=3] [ref=f3e204]
+        - article [ref=f3e207]:
+          - generic [ref=f3e208]: "05"
+          - heading "AI 디지털기반 수업 평가 전문가 프로젝트1기" [level=3] [ref=f3e209]
+        - article [ref=f3e212]:
+          - generic [ref=f3e213]: "06"
+          - heading "2026 AI지식역량강화 심화연수" [level=3] [ref=f3e214]
+    - generic [ref=f3e217]:
+      - generic [ref=f3e218]:
+        - generic [ref=f3e219]:
+          - paragraph [ref=f3e220]: 04 / KEY FOCUS AREAS
+          - heading "Four Pillars of My Educational Practice" [level=2] [ref=f3e221]: Four Pillars ofMy Educational Practice
+        - paragraph [ref=f3e222]:
+          - text: 네 가지 실천, 하나의 방향.
+          - strong [ref=f3e223]: 언제나 학생의 배움을 향합니다.
+      - generic [ref=f3e224]:
+        - article [ref=f3e225]:
+          - generic [ref=f3e226]: 01 / TEACHING
+          - heading "수업과 평가" [level=3] [ref=f3e229]
+          - list [ref=f3e230]:
+            - listitem [ref=f3e231]: 학생 참여형 수업 설계
+            - listitem [ref=f3e232]: 과정 중심 평가 · 수업–평가 일체화
+        - article [ref=f3e233]:
+          - generic [ref=f3e234]: 02 / SUPPORT
+          - heading "학습 지원" [level=3] [ref=f3e237]
+          - list [ref=f3e238]:
+            - listitem [ref=f3e239]: 기초학력 향상
+            - listitem [ref=f3e240]: 학습격차 해소를 위한 맞춤형 지원
+        - article [ref=f3e241]:
+          - generic [ref=f3e242]: 03 / INNOVATION
+          - heading "교육의 변화" [level=3] [ref=f3e245]
+          - list [ref=f3e246]:
+            - listitem [ref=f3e247]: AI·디지털 기반 교육혁신
+            - listitem [ref=f3e248]: 교육 정책과 교실 현장의 연결
+        - article [ref=f3e249]:
+          - generic [ref=f3e250]: 04 / COMMUNITY
+          - heading "함께 성장하기" [level=3] [ref=f3e253]
+          - list [ref=f3e254]:
+            - listitem [ref=f3e255]: 교사 성장과 수업 나눔
+            - listitem [ref=f3e256]: 함께 배우는 학교 문화와 조직 변화
+      - paragraph [ref=f3e259]: STUDENT-CENTERED LEARNING
+    - generic [ref=f3e262]:
+      - generic [ref=f3e263]:
+        - generic [ref=f3e264]:
+          - paragraph [ref=f3e265]: 05 / LECTURES & SHARING
+          - heading "Sharing Knowledge, Inspiring Teachers" [level=2] [ref=f3e266]: Sharing Knowledge,Inspiring Teachers
+        - paragraph [ref=f3e267]: 배움을 나누고,교육의 변화를 함께 만들어갑니다.
+      - generic [ref=f3e268]:
+        - generic [ref=f3e269]:
+          - paragraph [ref=f3e270]: 강의 및 연수 활동 학교
+          - generic [ref=f3e271]:
+            - generic [ref=f3e272]: 정신여자고등학교
+            - generic [ref=f3e273]: 중동고등학교
+            - generic [ref=f3e274]: 동구고등학교
+            - generic [ref=f3e275]: 마포고등학교
+            - generic [ref=f3e276]: 경복여고
+            - generic [ref=f3e277]: 대일고
+            - generic [ref=f3e278]: 여의도중학교
+          - generic [ref=f3e279]:
+            - text: FEATURED TRAINING
+            - heading "서울시 직업계고 수학교사 대상 기초학력향상 디지털수업연수" [level=3] [ref=f3e282]
+        - generic [ref=f3e283]:
+          - paragraph [ref=f3e284]: 주요 강의 및 나눔 주제
+          - article [ref=f3e285]:
+            - generic [ref=f3e288]:
+              - heading "AI·디지털 수업" [level=3] [ref=f3e289]
+              - paragraph [ref=f3e290]: 기술 활용을 학생의 배움으로 연결하기
+            - generic [ref=f3e291]: "01"
+          - article [ref=f3e292]:
+            - generic [ref=f3e295]:
+              - heading "수업과 평가" [level=3] [ref=f3e296]
+              - paragraph [ref=f3e297]: 학생 참여형 수업과 과정 중심 평가 설계하기
+            - generic [ref=f3e298]: "02"
+          - article [ref=f3e299]:
+            - generic [ref=f3e302]:
+              - heading "기초학력" [level=3] [ref=f3e303]
+              - paragraph [ref=f3e304]: 작은 성공 경험으로 학습의 출발점 만들기
+            - generic [ref=f3e305]: "03"
+          - article [ref=f3e306]:
+            - generic [ref=f3e309]:
+              - heading "교사 성장" [level=3] [ref=f3e310]
+              - paragraph [ref=f3e311]: 실천과 성찰을 나누는 동료 학습 문화 만들기
+            - generic [ref=f3e312]: "04"
+    - generic [ref=f3e313]:
+      - paragraph [ref=f3e314]: 06 / AWARDS & RECOGNITION
+      - heading "Recognition for Educational Innovation" [level=2] [ref=f3e315]: Recognition forEducational Innovation
+      - article [ref=f3e317]:
+        - generic [ref=f3e318]: EXCELLENCE IN EDUCATION
+        - generic [ref=f3e323]:
+          - paragraph [ref=f3e324]: 2025 · 수상
+          - heading "디지털교육부문 교육부장관상" [level=3] [ref=f3e325]
+          - paragraph [ref=f3e326]: AI·디지털 교육을 향한 연구와 실천을 이어 갑니다.
+          - generic [ref=f3e327]: RESEARCH · PRACTICE · INNOVATION
+        - generic [aria-hidden] [ref=f3e328]: ✳
+    - generic [ref=f3e330]:
+      - generic [ref=f3e331]:
+        - generic [ref=f3e332]:
+          - paragraph [ref=f3e333]: 07 / GLOBAL LEARNING
+          - heading "Learning Beyond Borders" [level=2] [ref=f3e334]: LearningBeyond Borders
+        - paragraph [ref=f3e335]: 세계의 교육을 경험하고,교실의 새로운 가능성을 탐색합니다.
+      - generic [ref=f3e336]:
+        - generic [ref=f3e337]:
+          - paragraph [ref=f3e340]: A GLOBAL PERSPECTIVE
+          - heading "AI 디지털 해외 글로벌 연수" [level=3] [ref=f3e341]
+          - paragraph [ref=f3e342]: 프랑스 · 덴마크 | 2026.01
+          - generic [ref=f3e343]:
+            - generic [ref=f3e344]: 프랑스
+            - generic [ref=f3e346]: 덴마크
+        - img "2026년 1월 프랑스와 덴마크 글로벌 교육 연수를 표현한 추상적인 경로" [ref=f3e348]:
+          - img [aria-hidden] [ref=f3e349]:
+            - generic [ref=f3e356]:
+              - generic [ref=f3e357]: FRANCE
+              - generic [ref=f3e358]: DENMARK
+          - generic [ref=f3e360]: TWO COUNTRIES. NEW POSSIBILITIES.
+      - generic [ref=f3e361]:
+        - heading "연수의 기록" [level=3] [ref=f3e362]
+        - generic [ref=f3e363]: GLOBAL LEARNING GALLERY
+      - generic [ref=f3e364]:
+        - figure "프랑스 FRANCE" [ref=f3e365]:
+          - generic [ref=f3e366]: 연수 사진을 기다립니다
+          - generic [ref=f3e371]:
+            - generic [ref=f3e372]: 프랑스
+            - generic [ref=f3e373]: FRANCE
+        - figure "덴마크 DENMARK" [ref=f3e374]:
+          - generic [ref=f3e375]: 연수 사진을 기다립니다
+          - generic [ref=f3e380]:
+            - generic [ref=f3e381]: 덴마크
+            - generic [ref=f3e382]: DENMARK
+    - generic [ref=f3e383]:
+      - paragraph [ref=f3e384]: LET’S LEARN & GROW TOGETHER
+      - heading "함께 나누는 배움이, 더 큰 변화를 만듭니다." [level=2] [ref=f3e385]: 함께 나누는 배움이,더 큰 변화를 만듭니다.
+      - paragraph [ref=f3e386]: 수업 나눔, 교육 연구, AI·디지털 교육의 새로운 가능성.교사와 학생의 성장을 함께 이야기하고 싶습니다.
+      - paragraph [ref=f3e387]: 연락처는 추후 안내 예정입니다.
+  - contentinfo [ref=f3e388]:
+    - link "구정숙 MATH EDUCATOR" [ref=f3e389] [cursor=pointer]:
+      - /url: "#home"
+      - generic [aria-hidden] [ref=f3e390]: g.
+      - generic [ref=f3e391]:
+        - text: 구정숙
+        - generic [ref=f3e392]: MATH EDUCATOR
+    - paragraph [ref=f3e393]: 도전으로 변화를 만들고, 교육의 본질을 향합니다.
+    - link "BACK TO TOP" [ref=f3e394] [cursor=pointer]:
+      - /url: "#home"
+      - text: BACK TO TOP ↑

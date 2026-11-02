@@ -1,0 +1,202 @@
+- generic [active] [ref=e1]:
+  - link "본문으로 건너뛰기" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - link "배움의 궤적 홈" [ref=e4] [cursor=pointer]:
+      - /url: "#home"
+      - generic [aria-hidden] [ref=e5]: ∴
+      - text: 배움의 궤적
+      - generic [ref=e6]: LEARNING IN PROGRESS
+    - navigation "주요 메뉴" [ref=e7]:
+      - link "소개" [ref=e8] [cursor=pointer]:
+        - /url: "#about"
+      - link "교육 철학" [ref=e9] [cursor=pointer]:
+        - /url: "#philosophy"
+      - link "수업과 연구" [ref=e10] [cursor=pointer]:
+        - /url: "#practice"
+      - link "AI & 디지털" [ref=e11] [cursor=pointer]:
+        - /url: "#lab"
+      - link "함께 성장하기" [ref=e12] [cursor=pointer]:
+        - /url: "#together"
+        - text: 함께 성장하기 ↗
+  - main [ref=e13]:
+    - region [ref=e14]:
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: MATHEMATICS · EDUCATION · POSSIBILITY
+        - heading "질문에서 시작해, 성장으로 이어지는 배움을 만듭니다." [level=1] [ref=e18]: 질문에서 시작해,성장으로 이어지는배움을 만듭니다.
+        - paragraph [ref=e19]: 수학으로 생각의 깊이를 더하고,AI와 디지털로 배움의 가능성을 넓힙니다.학생과 함께 배우고 성장하는 수학교사이자 교육연구자입니다.
+        - generic [ref=e20]:
+          - link "수업과 연구 살펴보기" [ref=e21] [cursor=pointer]:
+            - /url: "#practice"
+            - text: 수업과 연구 살펴보기
+            - generic [aria-hidden] [ref=e22]: ↗
+          - link "저의 이야기" [ref=e23] [cursor=pointer]:
+            - /url: "#about"
+            - text: 저의 이야기 ↓
+        - generic [ref=e24]:
+          - generic [ref=e25]: 수학교사
+          - generic [ref=e26]: 교육연구자
+          - generic [ref=e27]: AI·디지털 교육 실천가
+      - img "질문, 탐구, 연결, 성장이 하나의 곡선으로 이어지는 수학적 배움의 궤적" [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: THE GEOMETRY OF LEARNING
+          - generic [ref=e31]: FIG. 01
+        - img [aria-hidden] [ref=e32]:
+          - generic [ref=e47]:
+            - generic [ref=e48]: 질문
+            - generic [ref=e49]: 탐구
+            - generic [ref=e50]: 연결
+            - generic [ref=e51]: 성장
+          - generic [ref=e52]:
+            - generic [ref=e53]: learning →
+            - generic [ref=e54]: growth
+            - generic [ref=e55]: Δ possibility
+        - generic [ref=e56]:
+          - generic [aria-hidden] [ref=e57]: ✳
+          - paragraph [ref=e58]:
+            - text: 모든 학생에게는
+            - strong [ref=e60]: 저마다의 성장 곡선이 있습니다.
+        - generic [ref=e61]:
+          - generic [ref=e62]: 질문 + 탐구 + 연결
+          - generic [ref=e63]: ∞ POSSIBILITIES
+    - generic [ref=e65]:
+      - generic [ref=e66]: Designing Learning, Inspiring Growth
+      - generic [ref=e67]: 배움을 설계하고, 성장을 이끌다.
+      - generic [aria-hidden] [ref=e68]: ↘
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - paragraph [ref=e71]: 01 / ABOUT ME
+        - heading "가르치는 사람에서, 함께 배우는 사람으로." [level=2] [ref=e72]: 가르치는 사람에서,함께 배우는 사람으로.
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: 교육의 중심에는 언제나한 사람의 가능성이 있다고 믿습니다.
+        - paragraph [ref=e75]: 오랜 교직 경험 속에서 제가 바라본 것은 정답 너머의 생각, 그리고 아직 드러나지 않은 학생의 가능성입니다. 스스로 질문하고 탐구하는 경험이 배움의 출발점이 되도록 수업을 설계합니다.
+        - paragraph [ref=e76]: 수학 수업에서 시작된 고민은 교육 연구로, AI와 디지털 기술을 활용한 새로운 실천으로 이어집니다. 동료 교사와 경험을 나누며 저 역시 계속 배우는 교사로 남고 싶습니다.
+        - generic [ref=e77]:
+          - text: 교실에서 시작해, 더 넓은 배움으로
+          - generic [aria-hidden] [ref=e78]: ↗
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: 02 / MY PHILOSOPHY
+          - heading "배움의 중심에 두는 세 가지" [level=2] [ref=e84]
+        - paragraph [ref=e85]: 기술이 바뀌어도, 교육의 방향은 사람을 향합니다.
+      - generic [ref=e86]:
+        - article [ref=e87]:
+          - text: 01 —
+          - generic [aria-hidden] [ref=e88]: "?"
+          - heading "정답보다 좋은 질문" [level=3] [ref=e89]
+          - paragraph [ref=e90]: “왜 그럴까?”라는 작은 질문에서 출발합니다. 답을 찾는 과정에서 스스로 생각하는 힘을 기릅니다.
+          - generic [ref=e91]: CURIOSITY
+        - article [ref=e92]:
+          - text: 02 —
+          - generic [aria-hidden] [ref=e93]: ↗
+          - heading "비교보다 각자의 성장" [level=3] [ref=e94]
+          - paragraph [ref=e95]: 서로 다른 출발점과 속도를 존중합니다. 어제보다 한 걸음 더 나아간 배움의 순간을 발견합니다.
+          - generic [ref=e96]: GROWTH
+        - article [ref=e97]:
+          - text: 03 —
+          - generic [aria-hidden] [ref=e98]: ∞
+          - heading "혼자보다 함께하는 배움" [level=3] [ref=e99]
+          - paragraph [ref=e100]: 생각을 나누면 배움은 더 깊어집니다. 학생과 교사, 동료가 연결되는 배움의 공동체를 지향합니다.
+          - generic [ref=e101]: CONNECTION
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: 03 / AREAS OF PRACTICE
+          - heading "철학을 교실의 실천으로" [level=2] [ref=e106]
+        - paragraph [ref=e107]: 수업, 연구, 기술을 잇는 관심과 실천의 방향입니다.
+      - group "실천 분야 필터" [ref=e108]:
+        - button "전체 보기 03" [pressed] [ref=e109] [cursor=pointer]
+        - button "수학·탐구" [ref=e110] [cursor=pointer]
+        - button "교육 연구" [ref=e111] [cursor=pointer]
+        - button "AI·디지털" [ref=e112] [cursor=pointer]
+      - paragraph [ref=e113]
+      - generic [ref=e114]:
+        - article [ref=e115]:
+          - generic [aria-hidden] [ref=e116]:
+            - generic [ref=e117]: EXPLORING MATHEMATICS
+            - generic [ref=e118]: y = possibility
+            - generic [ref=e121]: 01 / INQUIRY
+          - generic [ref=e122]:
+            - text: 수학 · 탐구 중심 수업
+            - heading "생각하는 힘을 키우는 수학" [level=3] [ref=e123]
+            - paragraph [ref=e124]: 개념을 연결하고, 풀이를 설명하며, 자신만의 질문을 만들어가는 수업을 지향합니다.
+            - group [ref=e125]:
+              - generic "수업의 방향 살펴보기" [ref=e126] [cursor=pointer]:
+                - text: 수업의 방향 살펴보기
+                - generic [aria-hidden] [ref=e127]: ＋
+        - article [ref=e128]:
+          - generic [aria-hidden] [ref=e129]:
+            - generic [ref=e130]: REFLECTING ON LEARNING
+            - generic [ref=e132]:
+              - text: LEARNING NOTES
+              - generic [ref=e133]: 관찰 → 질문실천 → 성찰
+            - generic [ref=e137]: 02 / REFLECTION
+          - generic [ref=e138]:
+            - text: 교육 연구 · 수업 성찰
+            - heading "교실의 질문을 연구로" [level=3] [ref=e139]
+            - paragraph [ref=e140]: 학생의 배움을 관찰하고 수업을 돌아봅니다. 현장의 고민을 더 나은 교육을 위한 탐구로 이어갑니다.
+            - group [ref=e141]:
+              - generic "연구의 방향 살펴보기" [ref=e142] [cursor=pointer]:
+                - text: 연구의 방향 살펴보기
+                - generic [aria-hidden] [ref=e143]: ＋
+        - article [ref=e144]:
+          - generic [aria-hidden] [ref=e145]:
+            - generic [ref=e146]: CONNECTING POSSIBILITIES
+            - generic [ref=e147]:
+              - generic [ref=e148]: 질문
+              - generic [ref=e149]: AI
+              - generic [ref=e150]: 배움
+            - generic [ref=e151]: 03 / CONNECTION
+          - generic [ref=e152]:
+            - text: AI · 디지털 교육
+            - heading "기술로 넓히는 배움의 가능성" [level=3] [ref=e153]
+            - paragraph [ref=e154]: 교육적 목적에서 출발해 도구를 선택합니다. 기술이 학생의 사고와 참여를 어떻게 도울지 탐색합니다.
+            - group [ref=e155]:
+              - generic "실천의 방향 살펴보기" [ref=e156] [cursor=pointer]:
+                - text: 실천의 방향 살펴보기
+                - generic [aria-hidden] [ref=e157]: ＋
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - paragraph [ref=e160]: 04 / THE NEXT CLASSROOM
+        - heading [level=2] [ref=e161]:
+          - text: 새로운 기술 앞에서도,먼저 묻는 것은
+          - emphasis [ref=e162]: 배움
+          - text: 입니다.
+        - paragraph [ref=e163]: AI가 무엇을 할 수 있는지보다,학생이 무엇을 경험하고 성장할 수 있는지 생각합니다.
+        - generic [ref=e164]: HUMAN-CENTERED · PURPOSE-DRIVEN
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]: "01"
+          - generic [ref=e168]:
+            - heading "배움의 목표에서 시작하기" [level=3] [ref=e169]
+            - paragraph [ref=e170]: 수업에서 필요한 경험을 먼저 정의합니다.
+        - generic [ref=e171]:
+          - generic [ref=e172]: "02"
+          - generic [ref=e173]:
+            - heading "탐구를 돕는 도구 연결하기" [level=3] [ref=e174]
+            - paragraph [ref=e175]: 생각을 시각화하고 피드백을 나누는 방법을 찾습니다.
+        - generic [ref=e176]:
+          - generic [ref=e177]: "03"
+          - generic [ref=e178]:
+            - heading "성찰하며 다음 수업 만들기" [level=3] [ref=e179]
+            - paragraph [ref=e180]: 학생의 경험을 돌아보고 실천을 함께 개선합니다.
+    - generic [ref=e181]:
+      - paragraph [ref=e182]: 05 / GROWING TOGETHER
+      - generic [aria-hidden] [ref=e183]: ✳
+      - heading "좋은 배움은, 함께할 때 더 멀리 갑니다." [level=2] [ref=e184]: 좋은 배움은,함께할 때 더 멀리 갑니다.
+      - paragraph [ref=e185]: 수학 수업의 고민, 교육 연구의 질문, AI와 디지털 교육의 가능성.서로의 경험을 나누며 다음 배움을 함께 만들어가고 싶습니다.
+      - generic [ref=e186]:
+        - generic [ref=e187]: 수업 나눔
+        - generic [ref=e188]: ·공동 연구
+        - generic [ref=e189]: ·AI·디지털 교육
+        - generic [ref=e190]: ·교사 학습 공동체
+  - contentinfo [ref=e191]:
+    - link "배움의 궤적" [ref=e192] [cursor=pointer]:
+      - /url: "#home"
+      - generic [aria-hidden] [ref=e193]: ∴
+      - text: 배움의 궤적
+    - paragraph [ref=e194]: Designing Learning, Inspiring Growth
+    - link "맨 위로" [ref=e195] [cursor=pointer]:
+      - /url: "#home"
+      - text: 맨 위로 ↑
