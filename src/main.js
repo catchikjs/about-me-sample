@@ -1,5 +1,11 @@
+import './intro-font.css'
 import './style.css'
-import { profile, activities, expertise, schools, awards, gallery } from './content.js'
+import './visitors.js'
+import './experience.js'
+import './intro.js'
+import './starlight.js'
+import { categoryLabels, matchesActivityFilter } from './activity-filters.js'
+import { profile, activities, expertise, schools, schoolInnovation, awards, gallery } from './content.js'
 
 // 루트 assets 폴더의 파일은 Vite가 해시 처리하여 빌드에 포함합니다.
 const assets = import.meta.glob('../assets/*.{png,jpg,jpeg,webp,avif,svg}', { eager: true, query: '?url', import: 'default' })
@@ -23,12 +29,27 @@ function cloneTemplate(id) {
   return document.querySelector(id).content.firstElementChild.cloneNode(true)
 }
 
-setImage(document.querySelector('#profile-photo'), profile.image, document.querySelector('#profile-fallback'), '수학교사 구정숙 프로필')
-activities.forEach((activity, index) => {
+setImage(document.querySelector('#profile-photo'), profile.image, document.querySelector('#profile-fallback'), '수학교사 Good Sam 프로필')
+const activityGroups = new Map()
+const sortedActivities = [...activities].sort((a, b) => Math.max(0, ...b.years.map(Number)) - Math.max(0, ...a.years.map(Number)))
+sortedActivities.forEach((activity) => {
+  const year = activity.years.length ? String(Math.max(...activity.years.map(Number))) : '연도 미지정'
+  if (!activityGroups.has(year)) {
+    const group = document.createElement('tbody')
+    group.className = 'activity-year-group'
+    group.setAttribute('aria-label', `${year}년 활동`)
+    document.querySelector('#activity-list').append(group)
+    activityGroups.set(year, group)
+  }
   const card = cloneTemplate('#activity-template')
-  card.dataset.category = activity.category
+  card.dataset.categories = activity.categories.join(' ')
   card.querySelector('h3').textContent = activity.title
-  card.querySelector('.activity-index').textContent = String(index + 1).padStart(2, '0')
+  activity.categories.forEach((category) => {
+    const tag = document.createElement('span')
+    tag.className = `activity-category-tag category-${category}`
+    tag.textContent = categoryLabels[category]
+    card.querySelector('.activity-category').append(tag)
+  })
   activity.years.forEach((year) => {
     const badge = document.createElement('span')
     badge.className = 'year-badge'
@@ -40,18 +61,42 @@ activities.forEach((activity, index) => {
     description.textContent = activity.description
     description.hidden = false
   }
-  document.querySelector('#activity-list').append(card)
+  activityGroups.get(year).append(card)
 })
-expertise.forEach((title, index) => {
+expertise.forEach((item, index) => {
   const card = cloneTemplate('#expertise-template')
-  card.querySelector('h3').textContent = title
+  card.querySelector('h3').textContent = item.title
+  if (item.articleUrl) {
+    const link = card.querySelector('.expertise-article-link')
+    link.href = item.articleUrl
+    link.hidden = false
+    card.classList.add('expertise-with-article')
+  }
   card.querySelector('.expertise-index').textContent = String(index + 1).padStart(2, '0')
   document.querySelector('#expertise-list').append(card)
 })
-schools.forEach((name) => {
-  const school = document.createElement('span')
+schools.forEach((name, index) => {
+  const row = document.createElement('tr')
+  const number = document.createElement('td')
+  number.textContent = String(index + 1).padStart(2, '0')
+  const school = document.createElement('th')
+  school.scope = 'row'
   school.textContent = name
-  document.querySelector('#school-list').append(school)
+  row.append(number, school)
+  document.querySelector('#school-list').append(row)
+})
+schoolInnovation.forEach((activity, index) => {
+  const row = document.createElement('tr')
+  const number = document.createElement('td')
+  number.textContent = String(index + 1).padStart(2, '0')
+  const period = document.createElement('td')
+  period.textContent = activity.period
+  if (activity.period === '—') period.setAttribute('aria-label', '기간 미기재')
+  const title = document.createElement('th')
+  title.scope = 'row'
+  title.textContent = activity.title
+  row.append(number, period, title)
+  document.querySelector('#school-innovation-list').append(row)
 })
 awards.forEach((award) => {
   const card = cloneTemplate('#award-template')
@@ -61,18 +106,57 @@ awards.forEach((award) => {
   setImage(card.querySelector('img'), award.image, card.querySelector('.trophy-frame'), award.imageAlt || award.title)
   document.querySelector('#awards-list').append(card)
 })
-gallery.forEach((item) => {
+const galleryPhotos = gallery.map((item) => ({ ...item, src: assets[`../${item.image}`], thumb: assets[`../${item.thumbnail}`] }))
+galleryPhotos.forEach((item, index) => {
   const card = cloneTemplate('#gallery-template')
-  card.querySelector('.gallery-country').textContent = item.country
-  card.querySelector('.gallery-label').textContent = item.label
-  setImage(card.querySelector('img'), item.image, card.querySelector('.gallery-placeholder'), item.alt)
+  const button = card.querySelector('button')
+  const image = card.querySelector('img')
+  image.src = item.thumb
+  image.alt = item.alt
+  button.dataset.photoIndex = String(index)
+  button.setAttribute('aria-label', `${item.alt} 크게 보기`)
+  card.querySelector('figcaption').textContent = `연수의 기록 ${String(index + 1).padStart(2, '0')}`
   document.querySelector('#gallery-list').append(card)
+})
+const photoDialog = document.querySelector('#photo-dialog')
+const largePhoto = document.querySelector('#photo-dialog-image')
+const photoCaption = document.querySelector('#photo-dialog-caption')
+let currentPhoto = 0
+let galleryTrigger
+function showPhoto(index) {
+  currentPhoto = (index + galleryPhotos.length) % galleryPhotos.length
+  const item = galleryPhotos[currentPhoto]
+  largePhoto.src = item.src
+  largePhoto.alt = item.alt
+  photoCaption.textContent = `${currentPhoto + 1} / ${galleryPhotos.length} · ${item.alt}`
+}
+document.querySelector('#gallery-list').addEventListener('click', (event) => {
+  const button = event.target.closest('[data-photo-index]')
+  if (!button) return
+  galleryTrigger = button
+  showPhoto(Number(button.dataset.photoIndex))
+  photoDialog.showModal()
+  document.body.classList.add('photo-dialog-open')
+})
+document.querySelector('#photo-close').addEventListener('click', () => photoDialog.close())
+document.querySelector('#photo-prev').addEventListener('click', () => showPhoto(currentPhoto - 1))
+document.querySelector('#photo-next').addEventListener('click', () => showPhoto(currentPhoto + 1))
+photoDialog.addEventListener('click', (event) => { if (event.target === photoDialog) photoDialog.close() })
+photoDialog.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault()
+    showPhoto(currentPhoto + (event.key === 'ArrowLeft' ? -1 : 1))
+  }
+})
+photoDialog.addEventListener('close', () => {
+  document.body.classList.remove('photo-dialog-open')
+  largePhoto.removeAttribute('src')
+  galleryTrigger?.focus({ preventScroll: true })
 })
 if (profile.email) {
   const emailLink = document.querySelector('#email-link')
   emailLink.href = `mailto:${profile.email}`
   emailLink.hidden = false
-  document.querySelector('#contact-pending').hidden = true
 }
 
 const menuToggle = document.querySelector('.menu-toggle')
@@ -99,6 +183,14 @@ window.matchMedia('(min-width: 981px)').addEventListener('change', closeMenu)
 
 const filters = document.querySelectorAll('.filter')
 filters.forEach((button) => {
+  const count = activities.filter((activity) => matchesActivityFilter(activity.categories, button.dataset.filter)).length
+  const badge = document.createElement('span')
+  badge.className = 'filter-count'
+  badge.textContent = String(count)
+  button.append(badge)
+})
+document.querySelector('#filter-status').textContent = `${activities.length}개의 교육 활동을 표시합니다.`
+filters.forEach((button) => {
   button.addEventListener('click', () => {
     filters.forEach((filter) => {
       filter.classList.toggle('active', filter === button)
@@ -106,8 +198,11 @@ filters.forEach((button) => {
     })
     let visibleCount = 0
     document.querySelectorAll('.activity-card').forEach((card) => {
-      card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter
+      card.hidden = !matchesActivityFilter(card.dataset.categories.split(' '), button.dataset.filter)
       if (!card.hidden) visibleCount += 1
+    })
+    document.querySelectorAll('.activity-year-group').forEach((group) => {
+      group.hidden = ![...group.querySelectorAll('.activity-card')].some((card) => !card.hidden)
     })
     document.querySelector('#filter-status').textContent = `${visibleCount}개의 교육 활동을 표시합니다.`
   })
@@ -146,3 +241,20 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '-15% 0px -60% 0px' })
   document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section))
 }
+
+// 정밀 포인터에서만 사진에 가벼운 입체 움직임을 적용합니다.
+const heroVisual = document.querySelector('.hero-visual')
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
+function resetPhotoMotion() {
+  heroVisual.style.setProperty('--pointer-x', '0deg')
+  heroVisual.style.setProperty('--pointer-y', '0deg')
+}
+heroVisual.addEventListener('pointermove', (event) => {
+  if (motionPreference.matches || !finePointer.matches) return
+  const bounds = heroVisual.getBoundingClientRect()
+  heroVisual.style.setProperty('--pointer-x', `${((event.clientX - bounds.left) / bounds.width - .5) * 8}deg`)
+  heroVisual.style.setProperty('--pointer-y', `${((event.clientY - bounds.top) / bounds.height - .5) * -8}deg`)
+})
+heroVisual.addEventListener('pointerleave', resetPhotoMotion)
+motionPreference.addEventListener('change', resetPhotoMotion)
+finePointer.addEventListener('change', resetPhotoMotion)
