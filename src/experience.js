@@ -6,11 +6,12 @@ let soundEnabled = true
 let audioContext
 let masterVolume
 
-// 배경은 고정하고, 문구 애니메이션만 일시정지할 수 있습니다.
+// 아바타 주변 키워드의 움직임을 사용자가 멈출 수 있습니다.
 function syncMotion() {
   document.body.classList.toggle('background-paused', paused)
-  motionToggle.setAttribute('aria-pressed', String(paused))
-  motionToggle.textContent = paused ? '문구 재생 ▶' : '문구 멈춤 Ⅱ'
+  motionToggle.disabled = reducedMotion.matches
+  motionToggle.setAttribute('aria-pressed', String(paused || reducedMotion.matches))
+  motionToggle.textContent = reducedMotion.matches ? '움직임 줄이기 적용 중' : paused ? '키워드 움직임 재생' : '키워드 움직임 멈춤'
 }
 motionToggle.addEventListener('click', () => {
   paused = !paused
@@ -24,7 +25,7 @@ soundToggle.addEventListener('click', () => {
   soundEnabled = !soundEnabled
   if (masterVolume) masterVolume.gain.setTargetAtTime(soundEnabled ? 1 : 0, audioContext.currentTime, .015)
   soundToggle.setAttribute('aria-pressed', String(soundEnabled))
-  soundToggle.textContent = soundEnabled ? '효과음 켜짐 ♪' : '효과음 꺼짐 ♩'
+  soundToggle.textContent = soundEnabled ? '효과음 켜짐' : '효과음 꺼짐'
 })
 syncMotion()
 
@@ -108,16 +109,14 @@ async function playClickSound(isEntrance = false) {
   }
 }
 document.addEventListener('click', (event) => {
-  const button = event.target.closest('#navigation a, .menu-toggle, .button, .filter, .intro-enter')
+  const button = event.target.closest('#navigation a, .menu-toggle, .button, .filter, [data-topic]')
   if (!button) return
   if (!reducedMotion.matches && button.animate) {
     button.getAnimations().forEach((animation) => animation.cancel())
     button.animate([
-      { transform: 'translateY(0) scale(1)' },
-      { transform: 'translateY(3px) scale(.92)', offset: .3 },
-      { transform: 'translateY(-4px) scale(1.04)', offset: .65 },
-      { transform: 'translateY(0) scale(1)' },
-    ], { duration: 360, easing: 'ease-out' })
+      { transform: 'translateY(1px)' },
+      { transform: 'translateY(0)' },
+    ], { duration: 120, easing: 'ease-out' })
   }
   void playClickSound(button.matches('.intro-enter'))
 })

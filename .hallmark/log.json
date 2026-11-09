@@ -1,0 +1,47 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Avatar Index",
+  "theme": "studio",
+  "axes": "light/roman-serif/warm",
+  "hero": "Stage",
+  "nav": "three-part",
+  "footer": "colophon",
+  "imagery": "User-supplied teacher avatar and six real training photographs; training scene fallback for absent individual portrait",
+  "photos": [],
+  "entry": "index.html",
+  "fingerprint": "Hanging|Two-column asymmetric|Paper change|Solid|Inline with text|None",
+  "sections": [
+   "Avatar keyword constellation",
+   "Educational philosophy",
+   "Activity index",
+   "Professional development rows",
+   "Four areas of practice",
+   "Sharing and school records",
+   "Recognition",
+   "Global learning gallery",
+   "Contact",
+   "Colophon"
+  ],
+  "signature": "Six floating topic links surrounding the user avatar, accessible hover summaries and modal details",
+  "waived": [
+   "39b"
+  ],
+  "dismissed": [
+   "59"
+  ],
+  "prompt": "Korean teacher personal introduction: avatar and photo on entry, floating keywords with hover summaries and click popups, readable lively design",
+  "draw": "3fef9f",
+  "swaps": "Narrative Workflow/Corridor to Avatar Index/Stage because the user requested avatar-centered discovery of existing professional records",
+  "validation": {
+   "floor": 0,
+   "openReflex": 0,
+   "waivedReflex": 1,
+   "finishReview": "subagent, map caption collision resolved",
+   "build": "npm run build"
+  },
+  "date": "2026-11-09"
+ }
+]

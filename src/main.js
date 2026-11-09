@@ -1,9 +1,9 @@
-import './intro-font.css'
+import '@fontsource/hedvig-letters-serif/latin-400.css'
+import '@fontsource-variable/noto-sans-kr'
 import './style.css'
 import './visitors.js'
 import './experience.js'
-import './intro.js'
-import './starlight.js'
+import './keyword-dialog.js'
 import { categoryLabels, matchesActivityFilter } from './activity-filters.js'
 import { profile, activities, expertise, schools, schoolInnovation, awards, gallery } from './content.js'
 
@@ -29,7 +29,6 @@ function cloneTemplate(id) {
   return document.querySelector(id).content.firstElementChild.cloneNode(true)
 }
 
-setImage(document.querySelector('#profile-photo'), profile.image, document.querySelector('#profile-fallback'), '수학교사 Good Sam 프로필')
 const activityGroups = new Map()
 const sortedActivities = [...activities].sort((a, b) => Math.max(0, ...b.years.map(Number)) - Math.max(0, ...a.years.map(Number)))
 sortedActivities.forEach((activity) => {
@@ -100,7 +99,7 @@ schoolInnovation.forEach((activity, index) => {
 })
 awards.forEach((award) => {
   const card = cloneTemplate('#award-template')
-  card.querySelector('.award-year').textContent = `${award.year} · 수상`
+  card.querySelector('.award-year').textContent = `${award.year} 수상`
   card.querySelector('h3').textContent = award.title
   card.querySelector('.award-description').textContent = award.description
   setImage(card.querySelector('img'), award.image, card.querySelector('.trophy-frame'), award.imageAlt || award.title)
@@ -128,7 +127,7 @@ function showPhoto(index) {
   const item = galleryPhotos[currentPhoto]
   largePhoto.src = item.src
   largePhoto.alt = item.alt
-  photoCaption.textContent = `${currentPhoto + 1} / ${galleryPhotos.length} · ${item.alt}`
+  photoCaption.textContent = `${currentPhoto + 1} / ${galleryPhotos.length}, ${item.alt}`
 }
 document.querySelector('#gallery-list').addEventListener('click', (event) => {
   const button = event.target.closest('[data-photo-index]')
@@ -208,27 +207,7 @@ filters.forEach((button) => {
   })
 })
 
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
 if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return
-      entry.target.classList.remove('reveal-pending')
-      revealObserver.unobserve(entry.target)
-    })
-  }, { threshold: 0.08 })
-  if (!motionPreference.matches) {
-    document.querySelectorAll('.reveal').forEach((element) => {
-      element.classList.add('reveal-pending')
-      revealObserver.observe(element)
-    })
-  }
-  motionPreference.addEventListener('change', (event) => {
-    if (event.matches) {
-      document.querySelectorAll('.reveal-pending').forEach((element) => element.classList.remove('reveal-pending'))
-      revealObserver.disconnect()
-    }
-  })
   const navLinks = [...navigation.querySelectorAll('a')]
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -241,20 +220,3 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '-15% 0px -60% 0px' })
   document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section))
 }
-
-// 정밀 포인터에서만 사진에 가벼운 입체 움직임을 적용합니다.
-const heroVisual = document.querySelector('.hero-visual')
-const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
-function resetPhotoMotion() {
-  heroVisual.style.setProperty('--pointer-x', '0deg')
-  heroVisual.style.setProperty('--pointer-y', '0deg')
-}
-heroVisual.addEventListener('pointermove', (event) => {
-  if (motionPreference.matches || !finePointer.matches) return
-  const bounds = heroVisual.getBoundingClientRect()
-  heroVisual.style.setProperty('--pointer-x', `${((event.clientX - bounds.left) / bounds.width - .5) * 8}deg`)
-  heroVisual.style.setProperty('--pointer-y', `${((event.clientY - bounds.top) / bounds.height - .5) * -8}deg`)
-})
-heroVisual.addEventListener('pointerleave', resetPhotoMotion)
-motionPreference.addEventListener('change', resetPhotoMotion)
-finePointer.addEventListener('change', resetPhotoMotion)

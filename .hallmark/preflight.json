@@ -1,0 +1,28 @@
+{
+  "scanned": "2026-11-09",
+  "findings": {
+    "framework": "Vite 8, Vanilla JavaScript (package.json:10, vite.config.js:1)",
+    "fonts": "Black Han Sans intro, system Korean body (src/intro-font.css:3, src/style.css:1 before)",
+    "palette": "existing teal/violet and appended pastels; no locked design.md",
+    "motion": "CSS and Web Animations API; blocking intro (src/intro.js:1)",
+    "material": "teacher-colored.png user avatar; six real training photographs; assets/profile.png absent"
+  },
+  "preserve": [
+    "all professional facts and data arrays",
+    "filters, gallery, email and visitors",
+    "user avatar"
+  ],
+  "introduce": [
+    "direct-entry avatar keyword constellation",
+    "accessible keyword dialog",
+    "self-hosted Korean fonts and design tokens",
+    "readable Korean headings"
+  ],
+  "userPreference": "선명하고 발랄한 분위기",
+  "existingEdits": "index.html contained stray 1227 after intro button; removed along with blocking intro per direct-entry request",
+  "inferred": {
+    "audience": "교육 동료와 수업 나눔에 관심 있는 방문자",
+    "use": "키워드로 교육 철학과 활동을 살펴보고 연락하기"
+  },
+  "finalTheme": "Studio with self-hosted Korean body font"
+}
