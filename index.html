@@ -3,58 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#111d2b" />
+  <meta name="theme-color" content="#6b29e7" />
   <meta name="description" content="25년 경력의 수학교사이자 AI교육전문가 Good Sam. 학생의 성장을 중심으로 수업과 평가, AI·디지털 교육 혁신, 교육 연구와 수업 나눔을 이어갑니다." />
   <title>Good Sam | 수학교사 + AI교육전문가</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <noscript><link rel="stylesheet" href="./src/style.css" /></noscript>
 </head>
 <body>
+  <section class="jump-intro" id="jump-intro" aria-labelledby="jump-title" hidden>
+    <header class="jump-intro-header">
+      <a class="jump-intro-brand" href="#home" aria-label="Good Sam 소개 바로 보기">Good Sam<span aria-hidden="true">✳</span></a>
+      <button class="jump-skip" id="jump-skip" type="button">소개 바로 보기 <span aria-hidden="true">↗</span></button>
+    </header>
+    <div class="jump-intro-heading">
+      <h1 id="jump-title" tabindex="-1"><span>안녕, 반가워요!</span><span>꼬마가 점프해서 스위치를 켜면,<br /> 구쌤의 이야기가 열려요.</span></h1>
+    </div>
+    <div class="jump-stage" id="jump-stage" role="group" aria-label="뽀글머리 꼬마가 점프해서 높은 벽의 스위치를 켜는 놀이">
+      <div class="jump-stage-light" aria-hidden="true"></div>
+      <div class="jump-stage-burst" aria-hidden="true"></div>
+      <div class="welcome-switch" id="welcome-switch" role="img" aria-label="꺼진 환영 스위치">
+        <span class="switch-caption" id="switch-caption">HELLO, OFF</span>
+        <span class="switch-track"><span class="switch-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9M6.3 5.8a8 8 0 1 0 11.4 0"/></svg></span></span>
+        <span class="switch-spark" aria-hidden="true">✦</span>
+      </div>
+      <span class="jump-deco-star star-one" aria-hidden="true">✧</span>
+      <span class="jump-deco-star star-two" aria-hidden="true">✳</span>
+      <div class="jump-character-shadow" id="jump-shadow" aria-hidden="true"></div>
+      <div class="jump-character" id="jump-character"><img src="/src/assets/curly-girl.png" alt="풍성한 뽀글머리와 리본, 보라색 멜빵바지와 노란 운동화를 한 사랑스러운 꼬마 소녀" width="1199" height="1312" fetchpriority="high" draggable="false" /></div>
+      <p class="jump-speech-bubble" id="jump-bubble" aria-hidden="true">저 위에 불을 켜볼까?</p>
+      <p class="jump-stage-caption" aria-hidden="true">a tiny jump, a little magic.</p>
+      <div class="jump-confetti" id="jump-confetti" aria-hidden="true"></div>
+    </div>
+    <div class="jump-controls">
+      <p class="jump-status" id="jump-status" role="status" aria-live="polite">꾹 눌러 힘을 모아주세요.</p>
+      <div class="jump-power-meter" id="jump-power-meter" role="meter" aria-label="점프 에너지" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%, 힘을 모아주세요"><span class="jump-power-zone" aria-hidden="true"></span><span class="jump-power-fill" id="jump-power-fill" aria-hidden="true"></span></div>
+      <p class="jump-power-label" id="jump-power-help">초록색까지 모으면 충분해요</p>
+      <button class="jump-button" id="jump-button" type="button" aria-describedby="jump-power-help jump-key-hint"><span class="jump-button-icon" aria-hidden="true">↑</span><span id="jump-button-label">꾹 눌렀다가, 놓으면 점프!</span></button>
+      <p class="jump-key-hint" id="jump-key-hint">마우스 · 터치 또는 <kbd>Space</kbd>를 꾹 누른 뒤 놓아주세요.</p>
+    </div>
+  </section>
   <div id="site-content">
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
-    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6v15M3 4c4-1 7 0 9 2 2-2 5-3 9-2v14c-4-1-7 0-9 2-2-2-5-3-9-2Z"/></symbol>
-    <symbol id="icon-growth" viewBox="0 0 24 24"><path d="M4 20h17M5 16l5-6 4 3 6-9M14 4h6v6M6 20v-1M12 20v-3M18 20v-5"/></symbol>
-    <symbol id="icon-spark" viewBox="0 0 24 24"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="18" r="3"/><path d="m8 9 3 6m5-6-3 6M9 7h6"/></symbol>
-    <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 4v2"/></symbol>
-    <symbol id="icon-trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0ZM7 5H3v3a4 4 0 0 0 5 4M17 5h4v3a4 4 0 0 1-5 4M12 14v6M8 21h8"/></symbol>
-    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></symbol>
-    <symbol id="icon-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-7 5 8"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect class="icon-lilac" x="3" y="5" width="18" height="14" rx="3"/><path d="m4 6 8 7 8-7"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path class="icon-lilac" d="M3 4c4-1 7 0 9 2 2-2 5-3 9-2v14c-4-1-7 0-9 2-2-2-5-3-9-2Z"/><path d="M12 6v14M6 8l3 1M15 9l3-1M6 12l3 1M15 13l3-1"/></symbol>
+    <symbol id="icon-growth" viewBox="0 0 24 24"><path class="icon-mint" d="M5 20v-6h4v6m3 0V10h4v10m3 0V5h3v15"/><path d="M2 20h20M3 9l6-5 5 2 6-4"/></symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path class="icon-yellow" d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5Z"/><path d="M20 2v5m-2.5-2.5h5M21 18v4m-2-2h4"/></symbol>
+    <symbol id="icon-people" viewBox="0 0 24 24"><circle class="icon-pink" cx="9" cy="7" r="3.5"/><path class="icon-lilac" d="M2 21v-3a7 7 0 0 1 14 0v3Z"/><path d="M17 4a3.5 3.5 0 0 1 0 7M19 15a5 5 0 0 1 3 5v1"/></symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24"><path class="icon-yellow" d="M7 3h10v6a5 5 0 0 1-10 0Z"/><path d="M7 5H3v3a4 4 0 0 0 5 4M17 5h4v3a4 4 0 0 1-5 4M12 14v6M8 21h8"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle class="icon-mint" cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></symbol>
+    <symbol id="icon-photo" viewBox="0 0 24 24"><rect class="icon-lilac" x="3" y="3" width="18" height="18" rx="4"/><circle class="icon-yellow" cx="8" cy="8" r="1.5"/><path class="icon-mint" d="m3 17 5-5 4 4 4-7 5 8"/></symbol>
   </defs></svg>
   <header class="header">
     <a class="brand" href="#home" aria-label="Good Sam 처음으로"><span class="brand-symbol" aria-hidden="true">g<span>.</span></span><span>Good Sam<span class="brand-caption">수학교사 + AI교육전문가</span></span></a>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">메뉴 <span aria-hidden="true">＋</span></button>
-    <nav id="navigation" aria-label="주요 메뉴"><a href="#about">소개</a><a href="#activities">교육 활동</a><a href="#expertise">전문성</a><a href="#sharing">수업 나눔</a><a href="#awards">수상</a><a class="nav-contact" href="#contact">이야기 나누기 <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></nav>
+    <nav id="navigation" aria-label="주요 메뉴"><a href="#activities">교육 활동</a><a href="#expertise">전문성</a><a href="#sharing">수업 나눔</a><a href="#awards">수상</a><a class="nav-contact" href="#contact"><span class="contact-cta-copy"><span>구쌤에게 메일 한 통</span><small class="contact-email-address" data-email-address>scatchi@kbb.sen.go.kr</small></span><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a></nav>
   </header>
   <main id="main">
     <section class="hero hero-quote section-width" id="home" aria-labelledby="hero-title">
       <div class="introduction-copy">
-        <h1 id="hero-title" class="hero-philosophy-title" tabindex="-1"><span>연구하는 마음은 배움에 대한 겸손이요,</span><span>학생들을 향한 가장 깊은 사랑이다.</span></h1>
-        <div class="hero-actions"><a class="button primary" href="#about">저를 소개할게요 <svg class="icon" aria-hidden="true"><use href="#icon-people"/></svg></a><a class="contact-link" href="#contact">함께 이야기하기</a></div>
+        <p class="hero-eyebrow"><span aria-hidden="true">✦</span> HELLO, GOOD SAM!</p>
+        <h1 id="hero-title" class="hero-philosophy-title" tabindex="-1"><span>연구하는 마음은 배움에 대한 겸손이요,</span><span><mark>학생들을 향한 가장 깊은 사랑이다.</mark></span></h1>
       </div>
       <div class="hero-visual" role="group" aria-label="Good Sam을 소개하는 다섯 키워드">
         <div class="visual-orbit orbit-outer" aria-hidden="true"></div><div class="visual-orbit orbit-inner" aria-hidden="true"></div>
-        <figure class="learning-photo teacher-illustration"><img src="/src/assets/teacher-colored.png" alt="갈색 머리와 연두색 옷의 Good Sam 선생님 아바타" fetchpriority="high" width="1024" height="1024" /></figure>
+        <figure class="learning-photo teacher-illustration"><img src="/src/assets/teacher-colored.png" alt="갈색 머리와 연두색 옷의 Good Sam 선생님 아바타" fetchpriority="high" width="1024" height="1024" /><figcaption>안녕! 구쌤이에요 <span aria-hidden="true">✷</span></figcaption></figure>
         <div class="keyword-item keyword-math"><a class="keyword" href="https://jsku-class2.streamlit.app/" data-topic="math" aria-haspopup="dialog" aria-describedby="preview-math"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg>수학교사<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-math" role="tooltip">구쌤의 수학교실을 소개합니다.<br />팝업에서 수학교실을 열어보세요.</span></div>
-        <div class="keyword-item keyword-ai"><a class="keyword" href="#activities" data-topic="ai" aria-haspopup="dialog" aria-describedby="preview-ai"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg>AI와 디지털<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-ai" role="tooltip">새로운 기술을,<br />학생의 진짜 배움으로 연결합니다.</span></div>
+        <div class="keyword-item keyword-ai"><a class="keyword" href="#activities" data-topic="ai" aria-haspopup="dialog" aria-describedby="preview-ai"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg>교육활동<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-ai" role="tooltip">AI디지털 교육전문가 활동</span></div>
         <div class="keyword-item keyword-sharing"><a class="keyword" href="#sharing" data-topic="sharing" aria-haspopup="dialog" aria-describedby="preview-sharing"><svg class="icon" aria-hidden="true"><use href="#icon-people"/></svg>수업나눔<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-sharing" role="tooltip">수업의 경험과 성찰을 나누며<br />동료 교사와 함께 자랍니다.</span></div>
         <div class="keyword-item keyword-research"><a class="keyword" href="#expertise" data-topic="research" aria-haspopup="dialog" aria-describedby="preview-research"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg>전문성<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-research" role="tooltip">배우는 교사라는 정체성.<br />연구와 연수로 전문성을 넓혀 갑니다.</span></div>
-        <div class="keyword-item keyword-global"><a class="keyword" href="#global" data-topic="global" aria-haspopup="dialog" aria-describedby="preview-global"><svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>해외연수 및 수상<span class="keyword-plus" aria-hidden="true">+</span></a><span class="keyword-preview tooltip" id="preview-global" role="tooltip">프랑스와 네덜란드에서 만난<br />교실 밖, 새로운 교육의 가능성.</span></div>
+        <div class="keyword-item keyword-global"><a class="keyword" href="#global" data-topic="global" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>해외연수 및 수상<span class="keyword-plus" aria-hidden="true">+</span></a></div>
       </div>
       <div class="hero-footer"><p>궁금한 키워드를 가리키거나 눌러보세요.</p><button class="motion-control" id="motion-toggle" type="button" aria-pressed="false">키워드 움직임 멈춤</button></div>
     </section>
-    <section class="philosophy section-space" id="about"><div class="section-width">
-      <div class="section-heading reveal"><div><h2>학생의 성장에서<br />시작하는 수업</h2></div><p>배움의 본질을 지키며,<br />새로운 가능성에 도전합니다.</p></div>
-      <div class="philosophy-intro"><blockquote>연구하는 마음은 배움에 대한 겸손이요,<br />학생들을 향한 가장 깊은 사랑이다.</blockquote><p>배우는 교사, 그것이 저의 정체성입니다. 더 나은 배움을 향해 공부하는 일은 사랑하는 제자들을 향한 저의 실천입니다.</p><p class="teaching-years"><strong>25</strong><span>년의 수학교육 경험</span></p></div>
-      <div class="values-grid">
-        <article class="value-card reveal"><svg class="icon value-icon" aria-hidden="true"><use href="#icon-growth"/></svg><h3>학생의 성장을<br />중심에 두는 수업</h3><p>학생의 작은 변화와 성공 경험을 소중하게 생각합니다.</p></article>
-        <article class="value-card reveal"><svg class="icon value-icon" aria-hidden="true"><use href="#icon-book"/></svg><h3>배움이 일어나는<br />수업과 평가</h3><p>학생 참여형 수업과 과정 중심 평가를 통해 배움의 과정을 지원합니다.</p></article>
-        <article class="value-card reveal"><svg class="icon value-icon" aria-hidden="true"><use href="#icon-spark"/></svg><h3>AI와 디지털을 활용한<br />교육 혁신</h3><p>새로운 기술을 활용하되 언제나 학생의 배움을 중심에 둡니다.</p></article>
-        <article class="value-card reveal"><svg class="icon value-icon" aria-hidden="true"><use href="#icon-people"/></svg><h3>함께 배우고 성장하는<br />교사 문화</h3><p>수업 연구와 실천 경험을 나누며 함께 성장하는 교육 공동체를 지향합니다.</p></article>
-      </div>
-    </div></section>
     <section class="section-width section-space" id="activities">
       <div class="section-heading reveal"><div><h2>교실의 실천을,<br />교육의 변화로</h2></div><p>교실에서 시작한 실천을,<br />교육의 변화로 연결합니다.</p></div>
       <div class="activity-layout"><aside class="activity-aside reveal"><h3>실천하고, 연구하고,<br />함께 이끌어갑니다.</h3><p>AI·디지털 교육부터 수업과 평가,<br />교사 전문성 개발까지.</p><div class="year-track"><span>2008</span><span class="track-line"></span><span>2026</span></div></aside><div>
@@ -62,7 +85,7 @@
       <p class="activity-filter-note">여러 분야에 해당하는 활동은 각 카테고리에 함께 표시됩니다. 전체에서는 한 번만 표시합니다.</p>
       <p id="filter-status" class="sr-only" aria-live="polite"></p><div class="activity-table-wrap"><table class="activity-table" id="activity-list"><caption>연도별 교육 활동 및 경력</caption><thead><tr><th scope="col">활동 연도</th><th scope="col">주요 활동 및 경력</th><th scope="col">분야</th></tr></thead></table></div></div></div>
     </section>
-    <section class="expertise section-space" id="expertise"><div class="section-width"><div class="section-heading reveal"><div><h2>오늘도,<br />배우는 중입니다</h2></div><p>끊임없는 배움으로<br />교육 전문성을 확장합니다.</p></div><p class="section-kicker reveal">전문성 및 연수</p><div id="expertise-list" class="expertise-grid"></div></div></section>
+    <section class="expertise section-space" id="expertise"><div class="section-width"><div class="section-heading reveal"><div><h2>오늘도,<br />배우는 중입니다</h2></div></div><p class="section-kicker reveal">전문성 및 연수</p><div id="expertise-list" class="expertise-grid"></div></div></section>
     <section class="section-width section-space" id="focus"><div class="section-heading reveal"><div><h2>배움을 향한<br />네 가지 실천</h2></div><p>네 가지 실천, 하나의 방향.<br /><strong>언제나 학생의 배움을 향합니다.</strong></p></div>
       <div class="pillars-grid"><article class="pillar reveal"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg><h3>수업과 평가</h3><ul><li>학생 참여형 수업 설계</li><li>과정 중심 평가와 수업 평가 일체화</li></ul></article><article class="pillar reveal"><svg class="icon" aria-hidden="true"><use href="#icon-growth"/></svg><h3>학습 지원</h3><ul><li>기초학력 향상</li><li>학습격차 해소를 위한 맞춤형 지원</li></ul></article><article class="pillar reveal"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg><h3>교육의 변화</h3><ul><li>AI·디지털 기반 교육혁신</li><li>교육 정책과 교실 현장의 연결</li></ul></article><article class="pillar reveal"><svg class="icon" aria-hidden="true"><use href="#icon-people"/></svg><h3>함께 성장하기</h3><ul><li>교사 성장과 수업 나눔</li><li>함께 배우는 학교 문화와 조직 변화</li></ul></article></div>
       <div class="pillar-connection reveal"><span></span><p>언제나 학생의 배움을 향합니다</p><span></span></div>
@@ -82,7 +105,7 @@
       <p class="global-map-note"> 프랑스 · 네덜란드<br /><small>빨간 스폿은 파리와 암스테르담 위치입니다.</small></p></div>
       <div class="gallery-heading reveal"><h3>연수의 기록</h3><span>직접 보고, 함께 배운 시간</span></div><div id="gallery-list" class="gallery-grid"></div>
     </div></section>
-    <section class="contact section-width section-space reveal" id="contact"><h2>함께 배우는 이야기를<br />기다립니다</h2><p>수업 나눔, 교육 연구, AI·디지털 교육의 새로운 가능성.<br />교사와 학생의 성장을 함께 이야기하고 싶습니다.</p><a id="email-link" class="button primary" href="mailto:scatchi@kbb.sen.go.kr">scatchi@kbb.sen.go.kr <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></section>
+    <section class="contact section-width section-space reveal" id="contact" aria-label="구쌤에게 연락하기"><p>수업 제안도, 반가운 인사도.<br /> 구쌤에게 메일 한 통 보내주세요.</p><a id="email-link" class="button primary contact-email-button" href="mailto:scatchi@kbb.sen.go.kr"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg><span class="contact-email-copy"><strong>구쌤에게 연락하기</strong><span class="contact-email-address" data-email-address>scatchi@kbb.sen.go.kr</span></span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></section>
   </main>
   <footer class="footer section-width"><a class="brand" href="#home" aria-label="Good Sam 처음으로"><span class="brand-symbol" aria-hidden="true">g<span>.</span></span><span>Good Sam<span class="brand-caption">수학교사 + AI교육전문가</span></span></a><p>도전으로 변화를 만들고, 교육의 본질을 향합니다.</p><a class="back-top" href="#home">처음으로</a></footer>
   <div class="site-utilities section-width"><aside class="visitor-stats" aria-label="방문자 통계" data-state="loading">
@@ -95,11 +118,12 @@
   <template id="award-template"><article class="award-card reveal"><div class="award-art"><div class="trophy-frame"><svg class="icon" aria-hidden="true"><use href="#icon-trophy"/></svg></div><img class="award-image" src="/favicon.svg" alt="" width="180" height="180" hidden /></div><div class="award-copy"><p class="award-year"></p><h3></h3><p class="award-description"></p><span class="award-signature">연구하고, 실천하고, 나눕니다</span></div></article></template>
   <template id="gallery-template"><figure class="gallery-item reveal"><button class="gallery-thumbnail" type="button" aria-haspopup="dialog"><img src="/assets/training-01-thumb.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" /><span class="gallery-zoom" aria-hidden="true">사진 확대</span></button><figcaption></figcaption></figure></template>
   <dialog class="keyword-dialog" id="keyword-dialog" aria-labelledby="keyword-dialog-title" aria-describedby="keyword-dialog-description">
-    <div class="keyword-dialog-content"><div class="dialog-heading"><svg class="icon dialog-icon" aria-hidden="true"><use id="keyword-dialog-icon" href="#icon-book"/></svg><button class="dialog-close" id="keyword-close" type="button" aria-label="소개 팝업 닫기"><svg class="icon" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><h2 id="keyword-dialog-title" tabindex="-1">소개 키워드</h2><p id="keyword-dialog-description"></p><ul id="keyword-dialog-list" class="keyword-detail-list"></ul><a id="keyword-dialog-link" class="button primary" href="#about">소개 전체 보기</a><p class="dialog-hint">Esc 키 또는 바깥 영역을 눌러 닫을 수 있어요.</p></div>
+    <div class="keyword-dialog-content"><div class="dialog-heading"><svg class="icon dialog-icon" aria-hidden="true"><use id="keyword-dialog-icon" href="#icon-book"/></svg><button class="dialog-close" id="keyword-close" type="button" aria-label="소개 팝업 닫기"><svg class="icon" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><h2 id="keyword-dialog-title" tabindex="-1">소개 키워드</h2><p id="keyword-dialog-description"></p><ul id="keyword-dialog-list" class="keyword-detail-list"></ul><a id="keyword-dialog-link" class="button primary" href="#activities">교육 활동 전체 보기</a><p class="dialog-hint">Esc 키 또는 바깥 영역을 눌러 닫을 수 있어요.</p></div>
   </dialog>
   <dialog id="photo-dialog" class="photo-dialog" aria-label="해외연수 사진 크게 보기"><div class="photo-dialog-panel"><button type="button" class="photo-close" id="photo-close" aria-label="사진 닫기" autofocus>닫기</button><img id="photo-dialog-image" src="/assets/training-01.jpg" width="1600" height="1200" alt="" /><div class="photo-dialog-toolbar"><button type="button" id="photo-prev" aria-label="이전 사진"><svg class="icon" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><p id="photo-dialog-caption" aria-live="polite"></p><button type="button" id="photo-next" aria-label="다음 사진"><svg class="icon" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div></div></dialog>
   <noscript><p class="noscript-note">활동·연수·수상 목록을 보려면 JavaScript를 활성화해 주세요.</p></noscript>
   </div>
+  <button class="floating-top" id="back-to-top" type="button" aria-label="화면 맨 위로 이동" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 10 7-7 7 7M12 3v18"/></svg><span>맨 위로</span></button>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

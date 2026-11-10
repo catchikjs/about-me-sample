@@ -1,0 +1,47 @@
+.floating-top {
+  position: fixed;
+  z-index: var(--z-sticky);
+  top: 50%;
+  right: max(16px, env(safe-area-inset-right), calc((100vw - var(--container)) / 2));
+  translate: 0 -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 56px;
+  height: 68px;
+  padding: 8px 4px;
+  border: 2px solid #241044;
+  border-radius: 20px;
+  background: #ffe600;
+  color: #241044;
+  box-shadow: 4px 4px 0 #ff408e, 0 0 0 3px #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.floating-top svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.floating-top:hover { background: #00dcb0; transform: translateY(-3px); box-shadow: 4px 7px 0 #ff408e, 0 0 0 3px #ffffff; }
+.floating-top:active { transform: translateY(1px); }
+.floating-top:focus-visible { outline: 3px solid #241044; outline-offset: 6px; }
+body:has(dialog[open]) .floating-top { visibility: hidden; pointer-events: none; }
+
+@media (max-width: 700px) {
+  .floating-top {
+    right: max(8px, env(safe-area-inset-right));
+    width: 44px;
+    height: 58px;
+    gap: 4px;
+    border-radius: 16px;
+    font-size: 9px;
+    box-shadow: 3px 3px 0 #ff408e, 0 0 0 2px #ffffff;
+  }
+  .floating-top svg { width: 21px; height: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-top { transition: none; }
+  .floating-top:hover { transform: none; }
+}
+@media print { .floating-top { display: none; } }

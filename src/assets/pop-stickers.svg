@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <g stroke="#241044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A little sunshine in the upper left. -->
+    <g transform="translate(92 94) rotate(-12)">
+      <circle r="36" fill="#fff" stroke="#fff" stroke-width="13"/>
+      <circle r="36" fill="#ffe600"/>
+      <path d="M-12-7v4m24-4v4M-16 10c6 14 25 14 32 0"/>
+    </g>
+    <!-- A chunky star, with a generous white sticker edge. -->
+    <g transform="translate(713 84) rotate(13)">
+      <path d="m0-37 11 23 26 4-19 19 5 26L0 23l-23 12 5-26-19-19 26-4Z" fill="#fff" stroke="#fff" stroke-width="13"/>
+      <path d="m0-37 11 23 26 4-19 19 5 26L0 23l-23 12 5-26-19-19 26-4Z" fill="#ff408e"/>
+    </g>
+    <g transform="translate(260 38) rotate(-15)">
+      <path d="M-13-13 13 13M13-13-13 13" stroke="#fff" stroke-width="20"/>
+      <path d="M-13-13 13 13M13-13-13 13" stroke="#a467ff" stroke-width="12"/>
+    </g>
+    <g transform="translate(548 35) rotate(19)">
+      <ellipse rx="24" ry="11" stroke="#fff" stroke-width="15"/>
+      <ellipse rx="24" ry="11" stroke="#00dcb0" stroke-width="8"/>
+    </g>
+    <!-- A small doodle on either side leaves the avatar area open. -->
+    <g transform="translate(88 259) rotate(-10)">
+      <path d="m0-22 7 15 16 7-16 7L0 23-7 7-23 0l16-7Z" fill="#a467ff" stroke="#fff" stroke-width="12"/>
+      <path d="m0-22 7 15 16 7-16 7L0 23-7 7-23 0l16-7Z" fill="#a467ff"/>
+    </g>
+    <g transform="translate(722 245) rotate(10)">
+      <path d="M-15 0h30M0-15v30" stroke="#fff" stroke-width="22"/>
+      <path d="M-15 0h30M0-15v30" stroke="#ff408e" stroke-width="13"/>
+    </g>
+    <g transform="translate(705 415) rotate(10)">
+      <path d="M3-44-28 5h25l-7 39L29-9H4Z" fill="#fff" stroke="#fff" stroke-width="13"/>
+      <path d="M3-44-28 5h25l-7 39L29-9H4Z" fill="#ffe600"/>
+    </g>
+    <g transform="translate(99 427) rotate(-15)">
+      <path d="M-34 3c10-27 18 27 30 0S17 30 32 3" stroke="#fff" stroke-width="16"/>
+      <path d="M-34 3c10-27 18 27 30 0S17 30 32 3" stroke="#00dcb0" stroke-width="8"/>
+    </g>
+    <g transform="translate(524 484) rotate(-10)">
+      <path d="m0-24 6 15 16-7-9 14 12 10-17-2-3 16-6-15-16 7 9-14-12-10 17 2Z" fill="#fff" stroke="#fff" stroke-width="11"/>
+      <path d="m0-24 6 15 16-7-9 14 12 10-17-2-3 16-6-15-16 7 9-14-12-10 17 2Z" fill="#ff408e"/>
+    </g>
+  </g>
+</svg>

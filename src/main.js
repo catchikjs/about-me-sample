@@ -1,6 +1,13 @@
 import '@fontsource/hedvig-letters-serif/latin-400.css'
 import '@fontsource-variable/noto-sans-kr'
+import '@fontsource/jua/korean-400.css'
 import './style.css'
+import './pop-theme.css'
+import './jump-intro.css'
+import './jump-intro.js'
+import './back-to-top.css'
+import './section-layout.css'
+import './back-to-top.js'
 import './visitors.js'
 import './experience.js'
 import './keyword-dialog.js'
@@ -155,6 +162,7 @@ photoDialog.addEventListener('close', () => {
 if (profile.email) {
   const emailLink = document.querySelector('#email-link')
   emailLink.href = `mailto:${profile.email}`
+  document.querySelectorAll('[data-email-address]').forEach((address) => { address.textContent = profile.email })
   emailLink.hidden = false
 }
 

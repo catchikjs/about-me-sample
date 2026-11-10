@@ -1,4 +1,4 @@
-import { activities, expertise, schools, awards } from './content.js'
+import { activities, expertise, schools } from './content.js'
 
 // 팝업은 기존 소개와 content.js의 사실을 재사용합니다.
 const topics = {
@@ -20,7 +20,7 @@ const topics = {
   research: {
     title: '오늘도 배우는 교사', icon: 'spark', href: '#expertise', link: '전문성과 연수 살펴보기',
     description: '연구하는 마음은 배움에 대한 겸손이요, 학생들을 향한 가장 깊은 사랑이다. 끊임없는 배움으로 교육 전문성을 확장합니다.',
-    items: [...expertise.slice(0, 3).map((item) => item.title), ...awards.map((item) => `${item.year} ${item.title}`)],
+    items: expertise.map((item) => ({ text: item.title, articleUrl: item.articleUrl })),
   },
   global: {
     title: '세상에서 만난 배움', icon: 'globe', href: '#global', link: '해외연수 기록 보기',
@@ -75,10 +75,19 @@ function setupKeywords() {
         const li = document.createElement('li')
         if (typeof item === 'string') li.textContent = item
         else {
-          const period = document.createElement('span')
-          period.className = 'detail-period'
-          period.textContent = item.period
-          li.append(period, document.createTextNode(item.text))
+          if (item.period) {
+            const period = document.createElement('span')
+            period.className = 'detail-period'
+            period.textContent = item.period
+            li.append(period)
+          }
+          li.append(document.createTextNode(item.text))
+          if (item.articleUrl) {
+            const articleLink = document.querySelector('#expertise-template').content.querySelector('.expertise-article-link').cloneNode(true)
+            articleLink.href = item.articleUrl
+            articleLink.hidden = false
+            li.append(document.createElement('br'), articleLink)
+          }
         }
         return li
       }))

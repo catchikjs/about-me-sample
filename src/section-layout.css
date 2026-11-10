@@ -1,0 +1,28 @@
+/* The header scrolls away, so section links need no fixed-header offset. */
+html { scroll-padding-top: 0; }
+
+/* Let short viewports use less whitespace without limiting long records. */
+#site-content main > .section-space { padding-block: clamp(32px, 5svh, 64px); }
+#site-content .section-heading,
+#site-content .awards-heading { margin-bottom: clamp(24px, 4svh, 40px); }
+#site-content .section-heading h2,
+#site-content .awards-heading { font-size: clamp(32px, 2.5vw, 38px); line-height: 1.25; }
+#site-content .section-heading h2::before,
+#site-content .awards-heading::before { margin-bottom: 12px; }
+
+#site-content .expertise-card { padding-block: clamp(14px, 2.4svh, 18px); }
+#site-content .pillar { min-height: 160px; padding: 24px; }
+#site-content .pillar > .icon { top: 24px; right: 24px; }
+#site-content .pillar-connection { margin-top: 24px; }
+#site-content .award-card { padding: 32px; }
+#site-content main > .contact { padding-block: clamp(40px, 6svh, 64px); }
+
+@media (max-width: 700px) {
+  #site-content main > .section-space { padding-block: clamp(24px, 4svh, 40px); }
+  #site-content .section-heading h2,
+  #site-content .awards-heading { font-size: 28px; }
+  #site-content .section-heading > p { margin-top: 12px; }
+  #site-content .pillar { min-height: 0; }
+  #site-content .award-card { padding: 24px; }
+  #site-content main > .contact { padding-block: 32px; }
+}
